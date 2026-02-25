@@ -20,3 +20,8 @@ This is an automated ETL (Extract, Transform, Load) data pipeline. It fetches li
 * Eliminated manual data entry by building a fully hands-free data collection system.
 * Successfully handled Google API Rate Limiting (HTTP 429 Error) by optimizing the data execution loop.
 * Designed a clean, unidirectional data flow (Fetch ➡️ Process ➡️ Store) that runs seamlessly on minimal system resources.
+### 1. n8n Automation Workflow
+![n8n Workflow](workflow.jpeg.jpeg)
+
+### 2. Live Data Populating in Google Sheets
+![Google Sheets Output](sheets.jpeg.jpeg)
