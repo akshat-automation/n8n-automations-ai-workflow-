@@ -7,7 +7,7 @@ A professional 24/7 autonomous Bitcoin price monitoring system. This project fet
 
 ### 1. Workflow Logic
 The visual structure of the automation nodes.
-![Workflow Logic](workflow.jpeg.jpeg)
+![Workflow Logic](workflow.jpeg)
 
 ### 2. Execution History
 Evidence of consistent autonomous performance and successful triggers.
