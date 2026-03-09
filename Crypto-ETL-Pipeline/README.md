@@ -1,4 +1,4 @@
-# 🚀 Autonomous Crypto ETL Pipeline & Smart Alert System 
+# 🚀 Autonomous Intelligence Crypto ETL Pipeline & Smart Alert System 
 
 ## 📌 Project Overview
 This project is an automated ETL (Extract, Transform, Load) data pipeline built using *n8n*. It acts as an autonomous tracking system that fetches real-time cryptocurrency data, maintains a historical database, and triggers smart alerts based on dynamic conditional logic.
