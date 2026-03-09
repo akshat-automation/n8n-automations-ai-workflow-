@@ -3,7 +3,7 @@
   "nodes": [
     {
       "parameters": {
-        "chatId": "6901424304",
+        "chatId": "User's ID",
         "text": "=🚨 BTC Price Drop Alert!\nNew Price: {{ $('HTTP Request').item.json.price }}\nPrevious Price: {{ $('Get row(s) in sheet').item.json['PRICE '] }}",
         "additionalFields": {}
       },
