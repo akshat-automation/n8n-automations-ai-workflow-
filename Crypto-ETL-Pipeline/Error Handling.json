@@ -1,0 +1,68 @@
+{
+  "name": "Error Handling",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ffaa4828-7008-4033-b9e9-25060c213b87",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "chatId": "6901424304",
+        "text": "=🚨 PROJECT ALERT: CRITICAL FAILURE\n--------------------------------- \n📍 Workflow: {{ $workflow.name }} \n\n❌ Node:  {{ $json.execution.lastNodeExecuted }}\n\n⚠️ Error: {{ $node[\"Error Trigger\"].json.execution.error.message }}\n\n⏰ Time: {{ $now }} \n---------------------------------\n\nStatus: Automated rollback initiated.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "5898f979-85ac-477f-a603-ba6a77ffdacd",
+      "name": "Send a text message",
+      "webhookId": "195ff80c-b634-4190-b02e-703b13038395",
+      "credentials": {
+        "telegramApi": {
+          "id": "IFbeEvzNBdk4vMnq",
+          "name": "Telegram account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "timezone": "Asia/Kolkata",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "ce5af1f0-4f88-42fe-a6a1-2ec594017f07",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "dd7c5b738712afb81d6dd268aeb86328a6f4359aeb72cdd47146d2c1bd34ff4c"
+  },
+  "id": "DherqfeXZB2mzzKo",
+  "tags": []
+}
