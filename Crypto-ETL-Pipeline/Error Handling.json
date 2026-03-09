@@ -14,7 +14,7 @@
     },
     {
       "parameters": {
-        "chatId": "6901424304",
+        "chatId": "User's ID",
         "text": "=🚨 PROJECT ALERT: CRITICAL FAILURE\n--------------------------------- \n📍 Workflow: {{ $workflow.name }} \n\n❌ Node:  {{ $json.execution.lastNodeExecuted }}\n\n⚠️ Error: {{ $node[\"Error Trigger\"].json.execution.error.message }}\n\n⏰ Time: {{ $now }} \n---------------------------------\n\nStatus: Automated rollback initiated.",
         "additionalFields": {}
       },
