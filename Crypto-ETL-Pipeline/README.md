@@ -6,7 +6,15 @@ A production-grade, fully automated ETL (Extract, Transform, Load) pipeline buil
 ## 🏗️ Architecture: Two-Tier Fault Tolerance
 Unlike basic automation scripts, this project implements an industry-standard *Zero-Downtime Architecture* designed for high reliability:
 * *Tier 1 (Core Pipeline):* Scheduled autonomous execution for data extraction, transformation, and database loading.
-* *Tier 2 (Global Error Handler):* A decoupled, dedicated workflow that acts as a system-wide watchdog. 
+* *Tier 2 (Global Error Handler):* A decoupled, dedicated workflow that acts as a system-wide watchdog.
+
+## 📸 System Architecture
+
+*1. Core ETL Pipeline (Data Extraction & Loading):*
+![Main Workflow](main-workflow-screenshot.png)
+
+*2. Global Error Handler (Fault Tolerance & Alerts):*
+![Error Handler](error-handler-screenshot.png)  
 
 ## ⚙️ Key Capabilities
 * *100% Autonomous Execution:* Runs on a scheduled trigger without manual developer intervention.
