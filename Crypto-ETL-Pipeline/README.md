@@ -25,3 +25,32 @@ Unlike basic automation scripts, this project implements an industry-standard *Z
 * *Automation Engine:* n8n (Node-based workflow automation)
 * *APIs & Integrations:* Binance REST API, Google Sheets API, Telegram Bot API
 * *Error Handling:* Global Error Trigger, Dynamic JSON mapping
+
+## 🛠️ Prerequisites & Setup
+
+To deploy this autonomous pipeline on your own environment, you need:
+* *n8n Environment:* Local (Docker/Desktop) or Cloud instance.
+* *Credentials:* Binance REST API Key, Google Cloud Service Account (for Sheets API), and a Telegram Bot Token.
+
+*Installation Steps:*
+1. Clone this repository.
+2. In your n8n workspace, go to the top right and select *Import from File*.
+3. Import both the Main Workflow JSON and the Error Handling.json files.
+4. Update the credential nodes with your own API keys.
+5. Activate the workflows.
+
+## 🚨 Real-Time Error Telemetry (Payload Example)
+
+The Tier-2 Error Handler dynamically catches failures (like rate limits or timeouts) and injects the exact error payload into a Telegram alert. Here is the output format:
+
+```text
+🚨 SYSTEM ALERT: WORKFLOW FAILURE
+-----------------------------------
+📍 Workflow Name: Autonomous Intelligence Crypto ETL Pipeline & Smart Alert System
+❌ Failing Node: HTTP Request
+⚠️ Error Message: The connection cannot be established, this usually occurs due to an incorrect host (domain) value
+⏰ Time: 2026-03-11T13:10:11.171+05:30
+Failed Execution ID: 426
+-----------------------------------
+Status: Automated rollback initiated.
+'''
