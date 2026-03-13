@@ -54,3 +54,5 @@ Failed Execution ID: 426
 -----------------------------------
 Status: Automated rollback initiated.
 '''
+---
+⭐️ *If you find this project helpful, please consider giving it a star to show your support!*
