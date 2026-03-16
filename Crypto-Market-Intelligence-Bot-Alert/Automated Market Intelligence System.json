@@ -1,0 +1,166 @@
+{
+  "name": "Automated Market Intelligence System",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "344bf37c-a7f3-428d-a495-20ce590ae9ae",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -368,
+        0
+      ],
+      "id": "2d51c369-eaf7-4fb0-a241-9eaccc61425b",
+      "name": "Webhook",
+      "webhookId": "344bf37c-a7f3-428d-a495-20ce590ae9ae"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -144,
+        0
+      ],
+      "id": "558f5126-c644-4d17-8d9c-ccdaafd00e6b",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "0b1633d2-2f12-458c-a3f0-28f3d23e7e77",
+              "leftValue": "={{ $json.price_change_percentage_24h }}",
+              "rightValue": 3,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        64,
+        0
+      ],
+      "id": "f0d24a05-fb46-4ce1-a8c1-2ba6711ea5ed",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "chatId": "6901424304",
+        "text": "=🚨 MARKET PUMP ALERT (>3%) 🚨\n-------------------------\n{{ $json.leadsData.map(coin => '🪙 ' + coin.name + '\\n💰 Price: $' + coin.current_price + '\\n📈 24h Change: ' + coin.price_change_percentage_24h + '%').join('\\n-------------------------\\n') }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "dfe41146-d8f7-4b71-9a44-7ac78a3860b7",
+      "name": "Send a text message",
+      "webhookId": "05e760c3-a515-4d56-a3ed-146a8c9642dc",
+      "credentials": {
+        "telegramApi": {
+          "id": "WujZhq2EYuWAOFvq",
+          "name": "Telegram account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "leadsData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        256,
+        0
+      ],
+      "id": "7f15208e-14f1-4e6c-b2b6-223b51f9189e",
+      "name": "Aggregate"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ac4ff551-348a-4fa1-ac1c-92ec07b6df60",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "dd7c5b738712afb81d6dd268aeb86328a6f4359aeb72cdd47146d2c1bd34ff4c"
+  },
+  "id": "6lOlsT9WBLBKAt2b",
+  "tags": []
+}
