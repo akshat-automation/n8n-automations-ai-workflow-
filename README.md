@@ -1,6 +1,6 @@
 # 🛠️ Data Automation & Engineering Portfolio
 
-Welcome to my professional automation repository. I specialize in building scalable *ETL pipelines, **API integrations, and **autonomous workflows* that solve real-world business data challenges.
+Welcome to my professional automation repository. I build custom backend automations using n8n and Javascript to save business hours.
 
 ## 🚀 Featured Projects
 
