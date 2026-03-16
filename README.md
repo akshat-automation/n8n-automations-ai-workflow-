@@ -11,6 +11,11 @@ Welcome to my professional automation repository. I build custom backend automat
 
 ---
 
+### 2. Custom Crypto Market Alert Bot (n8n + JS)
+* Description: A real-time automation that fetches live financial data, filters out market noise based on volatility, and sends formatted Telegram alerts.
+* Core Tech: n8n, CoinGecko REST API, JavaScript (JSON Parsing), Telegram Bot API.
+* Architecture: [View Full Project Documentation & Logic](./Crypto-Market-Alert-Bot)
+
 ## 🛠️ Core Technical Competencies
 * *Workflow Orchestration:* n8n, Automation Logic
 * *Data Engineering:* ETL Pipeline Design, Data Transformation
