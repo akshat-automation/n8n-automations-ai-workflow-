@@ -19,10 +19,10 @@ This pipeline operates on a fixed logic flow without external autonomous tool ex
 ## 🛠️ Tech Stack
 
 * *Automation Engine:* n8n (Self-hosted/Local)
-* *LLM Provider:* Google Gemini API (gemini-3-flash)
+* *LLM Provider:*Google Gemini API (gemini - 3 flash)
 * *Data Source:* CoinGecko API (Free Tier)
 * *Notification Channel:* Telegram Bot API
-
+  
 ## 📸 Screenshots
 
 ### 1. The n8n Workflow Canvas
@@ -31,7 +31,7 @@ This pipeline operates on a fixed logic flow without external autonomous tool ex
 
 ### 2. The Final Telegram Output
 > (Add the screenshot of the clean VIP alert on your phone)
-![Telegram Output](telegrameg.png)
+![Telegram Output](telegrameg.jpeg)
 
 ## 🚀 Setup & Execution
 
