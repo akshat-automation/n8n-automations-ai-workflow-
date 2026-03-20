@@ -26,11 +26,9 @@ This pipeline operates on a fixed logic flow without external autonomous tool ex
 ## 📸 Screenshots
 
 ### 1. The n8n Workflow Canvas
-> (Add your n8n pipeline screenshot here - the one showing all nodes connected from Webhook to Telegram)
-![Workflow Canvas](workfloww.png)
+[Workflow Canvas](workfloww.png)
 
 ### 2. The Final Telegram Output
-> (Add the screenshot of the clean VIP alert on your phone)
 ![Telegram Output](telegrameg.jpeg)
 
 ## 🚀 Setup & Execution
