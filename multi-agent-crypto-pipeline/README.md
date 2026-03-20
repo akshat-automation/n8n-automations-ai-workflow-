@@ -26,7 +26,7 @@ This pipeline operates on a fixed logic flow without external autonomous tool ex
 ## 📸 Screenshots
 
 ### 1. The n8n Workflow Canvas
-[Workflow Canvas](workfloww.png)
+![Workflow Canvas](workfloww.png)
 
 ### 2. The Final Telegram Output
 ![Telegram Output](telegrameg.jpeg)
