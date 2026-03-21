@@ -14,7 +14,7 @@
       ],
       "id": "2d51c369-eaf7-4fb0-a241-9eaccc61425b",
       "name": "Webhook",
-      "webhookId": "344bf37c-a7f3-428d-a495-20ce590ae9ae"
+      "webhookId": "Webhook_Id"
     },
     {
       "parameters": {
@@ -65,7 +65,7 @@
     },
     {
       "parameters": {
-        "chatId": "6901424304",
+        "chatId": "User_Chat_Id",
         "text": "={{ $json.content.parts[0].text }}",
         "additionalFields": {
           "appendAttribution": false
@@ -79,7 +79,7 @@
       ],
       "id": "dfe41146-d8f7-4b71-9a44-7ac78a3860b7",
       "name": "Send a text message",
-      "webhookId": "05e760c3-a515-4d56-a3ed-146a8c9642dc",
+      "webhookId": "Id",
       "credentials": {
         "telegramApi": {
           "id": "WujZhq2EYuWAOFvq",
