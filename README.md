@@ -16,12 +16,11 @@ Welcome to my professional automation repository. I build custom backend automat
 * Core Tech: n8n, CoinGecko REST API, JavaScript (JSON Parsing), Telegram Bot API.
 * Architecture: [View Full Project Documentation & Logic](./Crypto-Market-Alert-Bot)
 
-### 3. Multi-Agent Crypto Intelligence Bot (n8n + Gemini AI)
-* Description: A production-ready AI pipeline that fetches live financial data, filters market noise via volatility thresholds (>3%), and uses a dual-agent architecture to deliver high-status market analysis via Telegram.
+### 3. Autonomous Market Intelligence Agent (n8n + Gemini AI + Tools)
 
-* Core Tech: n8n, CoinGecko REST API, Google Gemini 3 Flash (Multi-Agent Flow), Telegram Bot API.
-
-* Architecture:* [View Full Project Documentation & Logic](./multi-agent-crypto-pipeline)
+* *Description:* A production-ready autonomous pipeline that filters market volatility (>3%) and utilizes agentic web-search (SerpAPI) to fetch real-world fundamental catalysts for price action. Delivers institutional-grade market analysis via Telegram.
+* *Core Tech:* n8n, CoinGecko API, SerpAPI (Live Search Tools), Google Gemini 3 Flash (Multi-Agent Logic), Telegram Bot API.
+* *Architecture:* [View Full V2 Project Documentation & Logic](./multi-agent-crypto-pipeline)
 
 ## 🛠️ Core Technical Competencies
 * *Workflow Orchestration:* n8n, Automation Logic
